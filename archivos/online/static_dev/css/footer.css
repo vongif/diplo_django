@@ -1,0 +1,12 @@
+/* line 1, ../../../Desktop/Django/proyecto/diplo/archivos/online/static_dev/scss/footer.scss */
+footer {
+  background-color: black;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: end;
+}
+
+/*# sourceMappingURL=footer.css.map */

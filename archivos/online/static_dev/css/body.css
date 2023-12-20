@@ -1,0 +1,14 @@
+/* line 1, ../../../Desktop/Django/proyecto/diplo/archivos/online/static_dev/scss/body.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 8, ../../../Desktop/Django/proyecto/diplo/archivos/online/static_dev/scss/body.scss */
+body {
+  background-color: #183D3D;
+  font-family: "Poppins", sans-serif;
+}
+
+/*# sourceMappingURL=body.css.map */

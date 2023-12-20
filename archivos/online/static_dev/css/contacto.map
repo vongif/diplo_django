@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "contacto.css",
+	"sources": [
+		"../scss/contacto.scss"
+	],
+	"sourcesContent": [
+		"button:hover {\r\n    background: rgb(107, 107, 107);\r\n}"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,MAAM,AAAA,MAAM,CAAC;EACT,UAAU,EAAE,OAAkB;CACjC"
+}

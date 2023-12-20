@@ -1,0 +1,12 @@
+/* line 1, ../../../Desktop/Django/proyecto/diplo/archivos/online/static_dev/scss/verimagenes.scss */
+.icon-hover:hover {
+  border-color: #3b71ca !important;
+  background-color: white !important;
+}
+
+/* line 6, ../../../Desktop/Django/proyecto/diplo/archivos/online/static_dev/scss/verimagenes.scss */
+.icon-hover:hover i {
+  color: #3b71ca !important;
+}
+
+/*# sourceMappingURL=verimagenes.css.map */

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "header.css",
+	"sources": [
+		"../scss/header.scss"
+	],
+	"sourcesContent": [
+		"/* navbar del menu*/\n.navbar .navbar-nav .nav-link {\n  color: #f9f7f7;\n  border-radius: .25rem;\n  margin: 0 0.25em;\n  font-family: \"Poppins\", sans-serif;\n\n}\n\n/*imagen y search*/\n.imagensearch {\n  background-image: url(/media/img_varias/fondo1.png);\n  height: 300px;\n  width: 100%;\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,oBAAoB;;AACpB,AAAA,OAAO,CAAC,WAAW,CAAC,SAAS,CAAC;EAC5B,KAAK,EAAE,OAAO;EACd,aAAa,EAAE,MAAM;EACrB,MAAM,EAAE,QAAQ;EAChB,WAAW,EAAE,qBAAqB;CAEnC;;AAED,mBAAmB;;AACnB,AAAA,aAAa,CAAC;EACZ,gBAAgB,EAAE,iCAAiC;EACnD,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EACX,eAAe,EAAE,KAAK;EACtB,mBAAmB,EAAE,MAAM;EAC3B,iBAAiB,EAAE,SAAS;CAE7B"
+}

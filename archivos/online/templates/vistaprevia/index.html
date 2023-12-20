@@ -1,0 +1,265 @@
+{% extends "layout.html" %}
+{% load i18n %}
+
+
+{% block content %}
+
+<br>
+<br>
+<br>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container" id="portada">
+                <img src="/media/producto/portada.jpg" alt="">
+                <div class="centrado" style="position: absolute;
+    top: 40%;
+    left: 55%;
+    bottom: ;
+    ">nuevos</div>
+                <div class="centrado" style="position: absolute;
+    top: 60%;
+    left: 55%;
+    ">usados</div>
+                <div class="centrado" style="position: absolute;
+    top: 20%;
+    left: 55%;
+    ">Encontra productos</div>
+                <div class="centrado" style="position: absolute;
+    top: 80%;
+    left: 55%;
+    ">que buscas !!!</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein"
+    style="padding: 50px;">
+    <ul class="slider-container py-4">
+        {% for producto in producto|slice:"0:6" %}
+        <li class="">
+            <div class="card shadow h-100">
+                <div class="ratio ratio-16x9">
+                    <img src="/media/{{producto.imagen}}" alt="{{imagenes.nombre}}" class="card-img-top" style="position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);" loading="lazy">
+                </div>
+                <div class="card-body p-3 p-xl-5">
+                    <h3 class="card-title h5" style="color: green;">{{producto.categoria}}</h3>
+                    <br>
+                    <h3 class="card-title h5">{{producto.producto}}</h3>
+                    <p class="card-text">{{producto.descripcion}}</p>
+                    <div><a href="{% url 'verimagenes' %}" class="btn btn-primary" id="boton1">VER</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <button type="button" class="slider-nav" aria-label="Go left"></button>
+    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+    <div class="slider-indicators">
+        <button class="" aria-label="Go to slide"></button>
+        <button aria-label="Go to slide" class=""></button>
+        <button aria-label="Go to slide" class=""></button>
+        <button aria-label="Go to slide" class="active"></button>
+        <button aria-label="Go to slide"></button>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="gsock">
+                <div style="background-color: black;"
+                    class="swiffy-slider slider-item-show4 slider-nav-outside slider-nav-dark slider-nav-sm slider-nav-visible slider-nav-page slider-item-snapstart slider-nav-autoplay slider-nav-autopause slider-item-ratio slider-item-ratio-contain slider-item-ratio-32x9 bg-white shadow-lg py-3 py-lg-4"
+                    data-slider-nav-autoplay-interval="2000">
+                    <div class="slider-container" style="background-color: black;">
+                        <div style="font-family: Poppins, sans-serif; color: green;font-size:xxx-large; display: flex;
+                justify-content: center;
+                align-items: center;">Heladeras</div>
+                        <div style="font-family: Poppins, sans-serif; color: green;font-size:xxx-large; display: flex;
+                justify-content: center;
+                align-items: center;">Autos</div>
+                        <div style="font-family: Poppins, sans-serif; color: green;font-size:xxx-large; display: flex;
+                justify-content: center;
+                align-items: center;">Indumentaria</div>
+                        <div style="font-family: Poppins, sans-serif; color: green;font-size:xxx-large; display: flex;
+                justify-content: center;
+                align-items: center;">Bicicletas</div>
+                        <div style="font-family: Poppins, sans-serif; color: green;font-size:xxx-large; display: flex;
+                justify-content: center;
+                align-items: center;">Herramientas</div>
+                        <div style="font-family: Poppins, sans-serif; color: green;font-size:xxx-large; display: flex;
+                justify-content: center;
+                align-items: center;">Electro</div>
+                        <div style="font-family: Poppins, sans-serif; color: green;font-size:xxx-large; display: flex;
+                justify-content: center;
+                align-items: center;">Hogar</div>
+                        <div style="font-family: Poppins, sans-serif; color: green;font-size:xxx-large; display: flex;
+                justify-content: center;
+                align-items: center;">Informatica</div>
+                    </div>
+                    <button type="button" class="slider-nav" aria-label="Go left"></button>
+                    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- 
+<div class="container">
+    <div class="row">
+
+        <div class="col-12">
+
+
+            <h2><b>Productos</b> <b>Destacados</b></h2>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around; ">
+
+                {% for producto in producto|slice:"7:20" %}
+                <div class="card" style="width: 18rem;">
+
+                    <div class="card-img-top" style="width: 100%;
+                    height: 100%;
+                    object-fit: cover">
+
+                        <img src="/media/{{producto.imagen}}" alt="{{imagenes.nombre}}" class="img-fluid"
+                            style="object-fit: cover">
+                    </div>
+                    <div class="card-header">
+                        <h4>{{producto.producto}}</h4>
+                        <p class="item-price"><span> $ {{producto.precio}}</span></p>
+                        <a href="{% url 'verimagenes' %}" class="btn btn-primary">Ir a Tienda</a>
+                    </div>
+
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+-->
+
+
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg">
+            {% for producto in producto|slice:"7:10" %}
+            <div class="card bg-dark text-white" style="padding-bottom: 10px;">
+
+                <img src="/media/{{producto.imagen}}" class="card-img" alt="{{imagenes.nombre}}">
+                <div class="card-img-overlay">
+                    <h1 class="card-text" style="margin-top: 40px; margin-left: 20px;">{{producto.categoria}}</h1>
+                    <br>
+                    <br>
+                    <h5 class="card-title" style="margin-left: 20px;">{{producto.producto}}</h5>
+                    <p class="card-text" style="margin-left: 20px;"> $ {{producto.precio}}</p>
+
+                    <a href="{% url 'verimagenes' %}" class="btn btn-primary btn-lg" style="margin-left: 20px;">Ir a
+                        Tienda</a>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+{% block scripts %}
+<script>
+
+
+    $(" #boton1, #boton2, #boton3, #boton4, #boton5, #boton6").mouseenter(function () {
+        $(this).css("width", "100%");
+    }); $("#boton1, #boton2, #boton3, #boton4, #boton5, #boton6").mouseleave(function () {
+        $(this).css("width", "10%");
+    }); gsap.registerPlugin(ScrollTrigger); let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".gsock", start: "top center", end: "top 100px", markers: true, scrub:
+                3, //toggleActions: "play pause reverse pause" } }); tl.to(".gsock", { rotation: 0, x: 1100,
+            duration: 4
+        }).to(".gsock", { backgroundColor: "red", duration: 1 }) </script>
+
+
+
+
+<script>
+    gsap.to(".centrado", {
+        scrollTrigger: {
+            trigger: ".centrado",
+            start: "top center",
+            end: "bottom 50px",
+            toggleActions: "play pause resume pause"
+        },
+        rotation: 361,
+        x: 100,
+        duration: 1,
+    });
+</script>
+
+
+{% endblock %}
+
+
+
+
+
+
+{% endblock %}

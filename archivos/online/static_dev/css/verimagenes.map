@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "verimagenes.css",
+	"sources": [
+		"../scss/verimagenes.scss"
+	],
+	"sourcesContent": [
+		".icon-hover:hover {\r\n    border-color: #3b71ca !important;\r\n    background-color: white !important;\r\n  }\r\n  \r\n  .icon-hover:hover i {\r\n    color: #3b71ca !important;\r\n  }"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,WAAW,AAAA,MAAM,CAAC;EACd,YAAY,EAAE,kBAAkB;EAChC,gBAAgB,EAAE,gBAAgB;CACnC;;;AAED,AAAA,WAAW,AAAA,MAAM,CAAC,CAAC,CAAC;EAClB,KAAK,EAAE,kBAAkB;CAC1B"
+}

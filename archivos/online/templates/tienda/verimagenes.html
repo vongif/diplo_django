@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block tienda %}
+
+
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            {% for producto in productos %}
+            <a href="{% url 'ver' producto.id%}">
+                <img src="/media/{{producto.imagen}}" style="width: 30%;" />
+                <div>{{producto.descripcion}}</div>
+                <div>{{producto.precio}}</div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+-->
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- sidebar + content -->
+<section class="">
+    <div class="container">
+        <div class="row ">
+            <!-- sidebar -->
+
+
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-12">
+                    <div class="card shadow-0 border rounded-3">
+                        <div class="card-body">
+                            <div class="row g-0">
+                                {% for producto in productos|slice:"1:20" %}
+                                <div class="col-xl-3 col-md-4 d-flex justify-content-center">
+
+                                    <div class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0">
+
+                                        <img src="/media/{{producto.imagen}}" class="w-100" alt="{{imagenes.nombre}}" />
+                                        <a href="#!">
+                                            <div class="hover-overlay">
+                                                <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-5 col-sm-7" style="margin-bottom: 60px;">
+
+                                    <h5>{{producto.producto}}</h5>
+                                    <div class="d-flex flex-row">
+                                        <div class="text-warning mb-1 me-2">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="ms-1">
+                                                Nuevo
+                                            </span>
+                                        </div>
+                                        <span class="text-muted">Formas de entrega</span>
+                                    </div>
+
+                                    <p class="text mb-4 mb-md-0">
+                                        {{producto.descripcion}}
+                                    </p>
+                                </div>
+                                <div class="col-xl-3 col-md-3 col-sm-5">
+                                    <div class="d-flex flex-row align-items-center mb-1">
+                                        <h4 class="mb-1 me-1">{{producto.precio}}</h4>
+                                        <span class="text-danger"><s>$49.99</s></span>
+                                    </div>
+                                    <h6 class="text-success">En stock</h6>
+                                    <div class="mt-4">
+                                        <button class="btn btn-primary shadow-0" type="button"
+                                            href="{% url 'ver' producto.id %}">Comprar</button>
+                                        <a "class=" btn btn-light border px-2 pt-2 icon-hover"><i
+                                                class="fas fa-heart fa-lg px-1"></i></a>
+                                    </div>
+
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-3">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Pagination -->
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+{% block scripts %}
+
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script>
+
+
+
+    $(document).ready(function () {
+        $("div.sombra").mouseover(function () {
+            $("div.card.h-100.border-primary").css("boxShadow", "1px 2px 6px");
+        });
+        $("div.card.h-100.border-primary").mouseout(function () {
+            $("div.card.h-100.border-primary").css("boxShadow", "0 0 0px");
+        });
+    });
+
+</script>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+{% endblock %}

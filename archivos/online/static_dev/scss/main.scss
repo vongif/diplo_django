@@ -1,0 +1,22 @@
+$primary: #0c850a;
+
+$theme-colors: (
+  "primary": $primary,
+);
+
+
+
+
+
+@import "bootstrap/bootstrap";
+@import "login";
+@import "variables";
+@import "header";
+@import "body";
+@import "footer";
+@import "templatetags";
+@import "layout";
+@import "index";
+@import "contacto";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import "verimagenes";
